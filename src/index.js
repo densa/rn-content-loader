@@ -89,11 +89,13 @@ class ContentLoader extends Component {
     Animated.sequence([
       Animated.timing(this._animate, {
         toValue: 1,
-        duration: this.state.frequence
+        duration: this.state.frequence,
+        isInteraction: false
       }),
       Animated.timing(this._animate, {
         toValue: 0,
-        duration: this.state.frequence
+        duration: this.state.frequence,
+        isInteraction: false
       })
     ]).start(event => {
       if (event.finished) {
